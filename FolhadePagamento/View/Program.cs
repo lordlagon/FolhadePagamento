@@ -43,7 +43,7 @@ namespace FolhadePagamento.View
                         funcionario.Cpf = Console.ReadLine();
 
                         //Valida o CPF antes de Adicionar o Funcionário
-                        if (Util.ValidaCPF.Cpf(Convert.ToInt64(funcionario.Cpf)) == true)
+                        if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
                         {
                             if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
                             {

@@ -14,7 +14,7 @@ namespace FolhadePagamento.Model
              
         public override string ToString()
         {
-            return "Nome: " + Nome + " CPF: " + ValidaCPF.maskCpf(Cpf);
+            return "Nome: " + Nome + " CPF: " + Cpf;
         }
 
         
