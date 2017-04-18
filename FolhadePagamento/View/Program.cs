@@ -19,7 +19,7 @@ namespace FolhadePagamento.View
             do
             {
                 Console.Clear();
-                Console.WriteLine("\n          ______________Folha de Pagamento_______________");
+                Console.WriteLine("\n        ______________Folha de Pagamento_______________");
                 Console.WriteLine("         |                                               |");
                 Console.WriteLine("         |   1 - Cadastro de Funcionários                |");
                 Console.WriteLine("         |   2 - Lista de Funcionários                   |");
@@ -32,6 +32,7 @@ namespace FolhadePagamento.View
                 opcao = Console.ReadLine();
                 switch (opcao)
                 {
+                    //Cadastro de Funcionário
                     case "1":
                         funcionario = new Funcionario();
                         Console.Clear();
@@ -40,7 +41,9 @@ namespace FolhadePagamento.View
                         funcionario.Nome = Console.ReadLine();
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = Console.ReadLine();
-                        if (Util.ValidaCPF.Cpf(Convert.ToInt32(funcionario.Cpf)) == true)
+
+                        //Valida o CPF antes de Adicionar o Funcionário
+                        if (Util.ValidaCPF.Cpf(Convert.ToUInt64(funcionario.Cpf)) == true)
                         {
                             if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
                             {
@@ -57,6 +60,7 @@ namespace FolhadePagamento.View
                         }
                         break;
                     case "2":
+                        //Lista todos os funcionarios Cadastrados
                         Console.Clear();
                         Console.WriteLine(" -- Listar Funcionario -- \n");
                         foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Convert;
 
 namespace FolhadePagamento.Util
 {
     class ValidaCPF
     {
+
+        //Valida o CPF utilizando o Mod
         public static bool Cpf(int cpf)
         {
             string strCpf = cpf.ToString().PadLeft(11, '0');
@@ -15,7 +18,7 @@ namespace FolhadePagamento.Util
             if (strCpf.All(x => x == strCpf[0]))
                 return false;
 
-            var listCpf = strCpf.Select(num => Convert.ToInt32(num.ToString())).ToList();
+            var listCpf = strCpf.Select(num => ToInt32(num.ToString())).ToList();
 
             if (listCpf[9] != Mod11Cpf(listCpf, 10))
                 return false;
@@ -46,6 +49,5 @@ namespace FolhadePagamento.Util
         {
             return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
         }
-        
     }
 }
