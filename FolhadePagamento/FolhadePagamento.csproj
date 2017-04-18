@@ -47,6 +47,7 @@
     <Compile Include="DAL\FuncionarioDao.cs" />
     <Compile Include="Model\FolhaPagamento.cs" />
     <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Util\ValidaCPF.cs" />
     <Compile Include="View\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
