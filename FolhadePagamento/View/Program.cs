@@ -42,7 +42,7 @@ namespace FolhadePagamento.View
                         funcionario.Nome = Console.ReadLine();
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-
+                        
                         //Valida o CPF antes de Adicionar o Funcionário
                         if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
                         {
