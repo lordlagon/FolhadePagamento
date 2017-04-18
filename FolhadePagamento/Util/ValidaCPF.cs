@@ -41,5 +41,11 @@ namespace FolhadePagamento.Util
 
             return dv1;
         }
+
+        public static string maskCpf(string cpf)
+        {
+            return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
+        }
+        
     }
 }
