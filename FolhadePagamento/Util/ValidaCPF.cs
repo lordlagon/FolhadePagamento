@@ -8,7 +8,7 @@ namespace FolhadePagamento.Util
 {
     class ValidaCPF
     {
-        public static bool Cpf(int cpf)
+        public static bool Cpf(long cpf)
         {
             string strCpf = cpf.ToString().PadLeft(11, '0');
 
