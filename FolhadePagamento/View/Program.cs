@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FolhadePagamento.DAL;
 using FolhadePagamento.Model;
 
-namespace FolhadePagamento
+namespace FolhadePagamento.View
 {
     class Program
     {
