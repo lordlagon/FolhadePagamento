@@ -19,7 +19,9 @@ namespace FolhadePagamento.View
             do
             {
                 Console.Clear();
-                Console.WriteLine(" -- ");
+                Console.WriteLine("");
+
+                // testando essa coisa André
             } while (!opcao.Equals("0"));
 
         }
