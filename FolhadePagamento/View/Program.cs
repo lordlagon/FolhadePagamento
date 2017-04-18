@@ -19,24 +19,13 @@ namespace FolhadePagamento.View
             do
             {
                 Console.Clear();
-                Console.WriteLine("\n          _______________Folha de Pagamento_____________");
+                Console.WriteLine("\n          ______________Folha de Pagamento_______________");
                 Console.WriteLine("         |                                               |");
                 Console.WriteLine("         |   1 - Cadastro de Funcionários                |");
                 Console.WriteLine("         |   2 - Lista de Funcionários                   |");
-                Console.WriteLine("         |   3 - Cadastro de Vendedor                    |");
-                Console.WriteLine("         |   4 - Lista de Vendedores                     |");
-                Console.WriteLine("         |   5 - Cadastro de Produto                     |");
-                Console.WriteLine("         |   6 - Lista de Produtos                       |");
-                Console.WriteLine("         |   7 - Registrar vendas                        |");
-                Console.WriteLine("         |   8 - Listar vendas                           |");
-                Console.WriteLine("         |   9 - Listar vendas por cliente               |");
-                Console.WriteLine("         |   10 - Listar vendas por Endereço             |");
-                Console.WriteLine("         |   11 - Cadastrar Endereço                     |");
-                Console.WriteLine("         |   12 - Listar Endereço                        |");
-                Console.WriteLine("         |   13 - Registro de Horario para Entrega       |");
-                Console.WriteLine("         |   14 - Registro de Compras por Horario        |");
-                Console.WriteLine("         |   15 - Cadastrar Forma de Pagamento           |");
-                Console.WriteLine("         |   16 - Listar Compras por forma de Pagamento  |");
+                Console.WriteLine("         |   3 - Cadastro Folha de Pagamento             |");
+                Console.WriteLine("         |   4 - Consultar Folha de Pagamento            |");
+                Console.WriteLine("         |   5 - Listar Folhas de Pagamento              |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
