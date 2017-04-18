@@ -49,18 +49,21 @@ namespace FolhadePagamento.View
                         Console.WriteLine(" -- Cadastrar Funcionario -- \n");
                         Console.WriteLine("Digite o nome do Funcionario: ");
                         funcionario.Nome = Console.ReadLine();
-                        Console.WriteLine("Digite o CPF do cliente: ");
+                        Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = Console.ReadLine();
-
-
-
-                        if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
+                        if (Util.ValidaCPF.Cpf(Convert.ToInt32(funcionario.Cpf)) == true)
                         {
-                            Console.WriteLine("Funcionario gravado com sucesso!");
-                        }
-                        else
+                            if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
+                            {
+                                Console.WriteLine("Funcionario gravado com sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Não foi possível adicionar o Funcionario!");
+                            }
+                        }else
                         {
-                            Console.WriteLine("Não foi possível adicionar o Funcionario!");
+                            Console.WriteLine("CPF Inválido");
                         }
                         break;
                     case "2":
@@ -71,6 +74,7 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Funcionário: " + funcionarioCadastrado);
                         }
                         break;
+
 
                     case "0":
                         Console.Clear();
