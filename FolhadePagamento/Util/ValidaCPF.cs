@@ -41,4 +41,5 @@ namespace FolhadePagamento.Util
 
             return dv1;
         }
+    }
 }
