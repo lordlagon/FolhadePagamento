@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FolhadePagamento.DAL;
 using FolhadePagamento.Model;
+using FolhadePagamento.Util;
 
 namespace FolhadePagamento.View
 {
@@ -40,7 +41,7 @@ namespace FolhadePagamento.View
                         Console.WriteLine("Digite o nome do Funcionario: ");
                         funcionario.Nome = Console.ReadLine();
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        funcionario.Cpf = Console.ReadLine();
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
 
                         //Valida o CPF antes de Adicionar o Funcionário
                         if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)

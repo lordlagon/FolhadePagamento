@@ -11,10 +11,10 @@ namespace FolhadePagamento.Model
     {
         public string Nome { get; set; }
         public string Cpf { get; set; }
-             
+                            
         public override string ToString()
         {
-            return "Nome: " + Nome + " CPF: " + Cpf;
+            return "Nome: " + Nome + " CPF: " + ValidaCPF.maskCpf(Cpf);
         }
 
         
