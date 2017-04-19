@@ -72,34 +72,39 @@ namespace FolhadePagamento.View
                         }
                         break;
 
-                   /* case "3":
+                    case "3":
                         
                         folhaPagamento = new FolhaPagamento();
+                        salario = new Salario();
                         Console.Clear();
+                        Console.WriteLine(" -- Cadastrar Folha de Pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine()); //Valida o CPf e salva com a Mascará
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
 
-                        FuncionarioDao.BuscarFuncionarioPorCPF(funcionario)
-
-                        if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
+                        if(funcionario != null)
                         {
-                            if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
-                            {
-                                Console.WriteLine("Funcionario gravado com sucesso!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Cpf já foi utilizado");
-                                Console.WriteLine("Não foi possível adicionar o Funcionario!");
-                            }
+                            folhaPagamento.Funcionario = funcionario;
+                            Console.WriteLine("Digite o Mês da Trabalhado: ");
+                            folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Digite o Ano: ");
+                            folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Digite as horas Trabalhadas: ");
+                            folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Digite o Valor da hora Trabalhada: ");
+                            folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
+
+
                         }
                         else
                         {
-                            Console.WriteLine("CPF Inválido");
-                            Console.WriteLine("Não foi possível adicionar o Funcionario!");
+                            Console.WriteLine("Funcionario não existe!");
+                            Console.WriteLine("Não foi possível adicionar a Folha de Pagamento");
                         }
+                            
+                        
                         break;
-                        */
+                        
                     case "0":
                         Console.Clear();
                         break;
