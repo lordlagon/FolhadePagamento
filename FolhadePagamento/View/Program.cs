@@ -16,6 +16,7 @@ namespace FolhadePagamento.View
             string opcao = null;
             Funcionario funcionario = new Funcionario();
             FolhaPagamento folhaPagamento = new FolhaPagamento();
+            Salario salario = new Salario();
 
             do
             {
@@ -71,7 +72,34 @@ namespace FolhadePagamento.View
                         }
                         break;
 
+                   /* case "3":
+                        
+                        folhaPagamento = new FolhaPagamento();
+                        Console.Clear();
+                        Console.WriteLine("Digite o CPF do funcionario: ");
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine()); //Valida o CPf e salva com a Mascará
 
+                        FuncionarioDao.BuscarFuncionarioPorCPF(funcionario)
+
+                        if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
+                        {
+                            if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
+                            {
+                                Console.WriteLine("Funcionario gravado com sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Cpf já foi utilizado");
+                                Console.WriteLine("Não foi possível adicionar o Funcionario!");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("CPF Inválido");
+                            Console.WriteLine("Não foi possível adicionar o Funcionario!");
+                        }
+                        break;
+                        */
                     case "0":
                         Console.Clear();
                         break;
