@@ -13,12 +13,12 @@ namespace FolhadePagamento.Model
         public int HorasTrabalhadas { get; set; }
         public double ValorHora { get; set; }
         public Funcionario Funcionario { get; set; }
-        public Salario Salario { get; set; }
+        //public Salario Salario { get; set; }
 
         public FolhaPagamento()
         {
             Funcionario = new Funcionario();
-            Salario = new Salario();
+          //  Salario = new Salario();
         }
     }
 }
