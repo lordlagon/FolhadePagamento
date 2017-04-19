@@ -15,26 +15,16 @@ namespace FolhadePagamento.DAL
             {
                 new Funcionario()
                 {
-                    Nome = "Diogo",
-                    Cpf = "1"
+                    Nome = "André",
+                    Cpf = "009.061.419-40"
                 },
                 new Cliente()
                 {
-                    Nome = "José",
-                    Cpf = "2"
+                    Nome = "Gabriel",
+                    Cpf = "083.809.369-81"
                 },
-                new Cliente()
-                {
-                    Nome = "Maria",
-                    Cpf = "3"
-                },
-                new Cliente()
-                {
-                    Nome = "Andre",
-                    Cpf = "4"
-                }
             };
-            List<Vendedor> vendedores = new List<Vendedor>
+            /*List<Vendedor> vendedores = new List<Vendedor>
             {
                 new Vendedor()
                 {
@@ -72,32 +62,9 @@ namespace FolhadePagamento.DAL
                     Markup = 4,
                     Preco = 4
                 },
-            };
-            List<Endereco> enderecos = new List<Endereco>()
-            {
-                new Endereco()
-                {
-                    nomeRua = "Salgado",
-                    Cep = "000"
-                    
-                },
-                new Endereco()
-                {
-                    nomeRua = "Verdura",
-                    Cep = "001"
-
-                },
-                new Endereco()
-                {
-                    nomeRua = "Tempero",
-                    Cep = "002"
-
-                },
-            };
-            clientes.ForEach(x => ClienteDAO.AdicionarCliente(x));
-            vendedores.ForEach(x => VendedorDAO.AdicionarVendedor(x));
-            produtos.ForEach(x => ProdutoDAO.AdicionarProduto(x));
-            enderecos.ForEach(x => EnderecoDAO.AdicionarEndereco(x));
+            };*/
+            funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
+            
         }
     }
 }
