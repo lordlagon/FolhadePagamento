@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Dados.cs" />
     <Compile Include="DAL\FolhaPagamentoDao.cs" />
     <Compile Include="DAL\FuncionarioDao.cs" />
     <Compile Include="DAL\SalarioDao.cs" />

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +18,12 @@ namespace FolhadePagamento.DAL
                     Nome = "André",
                     Cpf = "009.061.419-40"
                 },
-                new Cliente()
+                new Funcionario()
                 {
                     Nome = "Gabriel",
                     Cpf = "083.809.369-81"
                 },
+                 
             };
             /*List<Vendedor> vendedores = new List<Vendedor>
             {
@@ -64,7 +65,7 @@ namespace FolhadePagamento.DAL
                 },
             };*/
             funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
-            
+
         }
     }
 }
