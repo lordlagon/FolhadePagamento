@@ -41,9 +41,8 @@ namespace FolhadePagamento.View
                         Console.WriteLine("Digite o nome do Funcionario: ");
                         funcionario.Nome = Console.ReadLine();
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        
-                        //Valida o CPF antes de Adicionar o Funcionário
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine()); //Valida o CPf e salva com a Mascará
+                                                
                         if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
                         {
                             if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
