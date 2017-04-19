@@ -13,6 +13,8 @@ namespace FolhadePagamento.View
     {
         static void Main(string[] args)
         {
+
+            Dados.Inicializar();
             string opcao = null;
             Funcionario funcionario = new Funcionario();
             FolhaPagamento folhaPagamento = new FolhaPagamento();
@@ -94,6 +96,7 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
 
+                            FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
 
                         }
                         else
