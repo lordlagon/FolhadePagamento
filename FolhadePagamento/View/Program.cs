@@ -52,12 +52,14 @@ namespace FolhadePagamento.View
                             }
                             else
                             {
+                                Console.WriteLine("Cpf já foi utilizado");
                                 Console.WriteLine("Não foi possível adicionar o Funcionario!");
                             }
                         }
                         else
                         {
                             Console.WriteLine("CPF Inválido");
+                            Console.WriteLine("Não foi possível adicionar o Funcionario!");
                         }
                         break;
                     case "2":
