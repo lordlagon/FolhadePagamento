@@ -9,8 +9,7 @@ namespace FolhadePagamento.Model
 {
     class Salario
     {
-        public double SalarioBruto { get; set; }
-        public double ImpostoRenda { get; set; }
+        public double ImpRenda { get; set; }
         public double Inss { get; set; }
         public double Fgts { get; set; }
         public double SalarioLiquido { get; set; }

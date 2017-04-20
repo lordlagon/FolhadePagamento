@@ -89,11 +89,12 @@ namespace FolhadePagamento.View
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
                             folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
+                            //Colocar a busca correta
                             Console.WriteLine("Digite as horas Trabalhadas: ");
                             folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
-                            
+                            folhaPagamento.SalarioBruto = CalcSalario.CalcSalarioBruto(folhaPagamento);
 
                             FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
                             

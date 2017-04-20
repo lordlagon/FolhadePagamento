@@ -9,50 +9,61 @@ namespace FolhadePagamento.Util
 {
     class CalcSalario
     {
-        
-
-
-
-
         public static double CalcSalarioBruto(FolhaPagamento folha)
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
         }
-
-        //Tabela Calculo INSS
-
-        
-        public static Salario CalcINSS(Salario salario)
+        public static double CalcFGTS(FolhaPagamento folha)
         {
-            if (salario.SalarioBruto < 1659.38)
+            return folha.SalarioBruto * 0.08;
+        }
+        //Tabela Calculo INSS
+        
+        public static Salario CalcINSS(FolhaPagamento folha)
+        {
+            Salario salario = new Salario();
+            if (folha.SalarioBruto < 1659.38)
             {
-                salario.Inss = salario.SalarioBruto * 0.08;
+                salario.Inss = folha.SalarioBruto * 0.08;
             }
-            if (salario.SalarioBruto >= 1659.39 && salario.SalarioBruto < 2765.66)
+            if (folha.SalarioBruto >= 1659.39 && folha.SalarioBruto < 2765.66)
             {
-                salario.Inss = salario.SalarioBruto * 0.09;
+                salario.Inss = folha.SalarioBruto * 0.09;
             }
-            if (salario.SalarioBruto >= 2765.67 && salario.SalarioBruto <= 5531.31)
+            if (folha.SalarioBruto >= 2765.67 && folha.SalarioBruto <= 5531.31)
             {
-                salario.Inss = salario.SalarioBruto * 0.11;
+                salario.Inss = folha.SalarioBruto * 0.11;
             }
-            if (salario.SalarioBruto > 5531.31)
+            if (folha.SalarioBruto > 5531.31)
             {
                 salario.Inss = 608.44;
             }
-
             return salario;
         }
-        /*  
-        a) Salário Bruto
-        b) Imposto de Renda
-        c) INSS
-        d) FGTS
-        e) Salário Líquido
 
-
-    public static Salario salario
+        public static Salario CalcImpRenda(FolhaPagamento folha)
         {
-        }*/
+            Salario salario = new Salario();
+            if (folha.SalarioBruto < 1903.98)
+            {
+                salario.Inss = folha.SalarioBruto * 0.08;
+            }
+            if (folha.SalarioBruto >= 1659.39 && folha.SalarioBruto < 2765.66)
+            {
+                salario.Inss = folha.SalarioBruto * 0.09;
+            }
+            if (folha.SalarioBruto >= 2765.67 && folha.SalarioBruto <= 5531.31)
+            {
+                salario.Inss = folha.SalarioBruto * 0.11;
+            }
+            if (folha.SalarioBruto > 5531.31)
+            {
+                salario.Inss = 608.44;
+            }
+            return salario;
+        }
+
+
+
     }
 }
