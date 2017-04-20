@@ -66,6 +66,7 @@ namespace FolhadePagamento.DAL
                 },
             };*/
             funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
+            folhasDePagamento.ForEach(x => FolhaPagamentoDao.AdicionarFolha(x));
 
         }
     }

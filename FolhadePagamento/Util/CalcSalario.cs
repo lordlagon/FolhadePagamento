@@ -10,13 +10,17 @@ namespace FolhadePagamento.Util
     class CalcSalario
     {
 
-  
-        /*  
-        a) Salário Bruto
-        b) Imposto de Renda
-        c) INSS
-        d) FGTS
-        e) Salário Líquido
-        */
+
+            /*  
+            a) Salário Bruto
+            b) Imposto de Renda
+            c) INSS
+            d) FGTS
+            e) Salário Líquido
+            
+
+        public static Salario salario
+            {
+            }*/
     }
 }
