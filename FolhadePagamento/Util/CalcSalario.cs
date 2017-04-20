@@ -9,6 +9,8 @@ namespace FolhadePagamento.Util
 {
     class CalcSalario
     {
+
+
             /*  
             a) Salário Bruto
             b) Imposto de Renda
