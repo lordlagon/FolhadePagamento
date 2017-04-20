@@ -23,7 +23,12 @@ namespace FolhadePagamento.DAL
                     Nome = "Gabriel",
                     Cpf = "083.809.369-81"
                 },
-                 
+                new Funcionario()
+                {
+                    Nome = "Bruno",
+                    Cpf = "092.181.829-78"
+                },
+
             };
             /*List<Vendedor> vendedores = new List<Vendedor>
             {
