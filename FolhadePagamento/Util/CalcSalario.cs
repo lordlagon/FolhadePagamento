@@ -15,6 +15,10 @@ namespace FolhadePagamento.Util
             c) INSS
             d) FGTS
             e) Salário Líquido
-            */
+            
+
+        public static Salario salario
+            {
+            }*/
     }
 }
