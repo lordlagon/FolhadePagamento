@@ -20,5 +20,10 @@ namespace FolhadePagamento.Model
             Funcionario = new Funcionario();
           //  Salario = new Salario();
         }
+
+        public override string ToString()
+        {
+            return "Nome: " + Nome + " CPF: " + Cpf;
+        }
     }
 }
