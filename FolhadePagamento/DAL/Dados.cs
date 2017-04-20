@@ -25,24 +25,25 @@ namespace FolhadePagamento.DAL
                 },
                  
             };
-            /*List<Vendedor> vendedores = new List<Vendedor>
+            List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
             {
-                new Vendedor()
+                new folhasDePagamento()
                 {
+                    Mes
                     Nome = "Felipe",
                     Cpf = "5"
                 },
-                new Vendedor()
+                new folhasDePagamento()
                 {
                     Nome = "Augusto",
                     Cpf = "6"
                 },
-                new Vendedor()
+                new folhasDePagamento()
                 {
                     Nome = "Rafaela",
                     Cpf = "7"
                 },
-            };
+            };/*
             List<Produto> produtos = new List<Produto>
             {
                 new Produto()
