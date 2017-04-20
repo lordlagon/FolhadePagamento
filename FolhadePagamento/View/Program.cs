@@ -94,8 +94,7 @@ namespace FolhadePagamento.View
                             folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
-
-                            Console.WriteLine("Salario Bruto " + CalcSalario.CalcSalarioBruto(folhaPagamento));
+                            Console.WriteLine("//////Salario Bruto " + CalcSalario.CalcSalarioBruto(folhaPagamento));
 
                             FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
 
