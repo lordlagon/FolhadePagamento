@@ -37,7 +37,7 @@ namespace FolhadePagamento.DAL
                     Funcionario = { Nome = "Gabriel", Cpf = "083.809.369-81" },
                     Mes = 10,
                     Ano = 2015,
-                    HorasTrabalhadas=0,
+                    HorasTrabalhadas=44,
                     ValorHora = 2.4,
                 
                 },
