@@ -8,5 +8,6 @@ namespace FolhadePagamento.DAL
 {
     class SalarioDao
     {
+
     }
 }

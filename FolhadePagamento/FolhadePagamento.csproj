@@ -50,6 +50,7 @@
     <Compile Include="Model\FolhaPagamento.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Salario.cs" />
+    <Compile Include="Util\CalcSalario.cs" />
     <Compile Include="Util\ValidaCPF.cs" />
     <Compile Include="View\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
