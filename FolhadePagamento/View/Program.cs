@@ -95,7 +95,11 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
 
+                            Console.WriteLine("Salario Bruto " + CalcSalario.CalcSalarioBruto(folhaPagamento));
+
                             FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
+
+
 
                         }
                         else
