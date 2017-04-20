@@ -94,8 +94,10 @@ namespace FolhadePagamento.View
                             folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("//////Salario Bruto " + CalcSalario.CalcSalarioBruto(folhaPagamento));
 
                             FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
+                            
 
                         }
                         else
@@ -107,7 +109,40 @@ namespace FolhadePagamento.View
                         
                         break;
 
-                   case "5":
+                    /*case "4":
+                        folhaPagamento = new FolhaPagamento();
+
+                        Console.Clear();
+                        Console.WriteLine(" -- Consultar Folha de Pagamento -- \n");
+                        Console.WriteLine("Digite o CPF do funcionario: ");
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
+
+                        if (funcionario != null)
+                        {
+                            folhaPagamento.Funcionario = funcionario;
+                            Console.WriteLine("Digite o Mês da Trabalhado: ");
+                            folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Digite o Ano: ");
+                            folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Digite as horas Trabalhadas: ");
+                            folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Digite o Valor da hora Trabalhada: ");
+                            folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
+
+                            FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Funcionario não existe!");
+                            Console.WriteLine("Não foi possível adicionar a Folha de Pagamento");
+                        }
+
+
+                        break;*/
+
+                    case "5":
                         //Consulta a folha de pagamento
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");

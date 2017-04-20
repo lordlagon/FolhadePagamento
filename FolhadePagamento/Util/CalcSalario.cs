@@ -9,18 +9,22 @@ namespace FolhadePagamento.Util
 {
     class CalcSalario
     {
+        
+        public static double CalcSalarioBruto(FolhaPagamento folha)
+        {
+            return folha.HorasTrabalhadas * folha.ValorHora;
+        }
+
+        /*  
+        a) Salário Bruto
+        b) Imposto de Renda
+        c) INSS
+        d) FGTS
+        e) Salário Líquido
 
 
-            /*  
-            a) Salário Bruto
-            b) Imposto de Renda
-            c) INSS
-            d) FGTS
-            e) Salário Líquido
-            
-
-        public static Salario salario
-            {
-            }*/
+    public static Salario salario
+        {
+        }*/
     }
 }
