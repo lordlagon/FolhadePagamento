@@ -11,17 +11,48 @@ namespace FolhadePagamento.DAL
     {
         private static List<FolhaPagamento> folhasdepagamento = new List<FolhaPagamento>();
 
-        public static void AdicionarFolha(FolhaPagamento folha)
+        public static bool AdcionarFolha (FolhaPagamento folhaPagamento)
+        { if(BuscarFolha(folhaPagamento)!= null)
+            {
+                return false;
+            }
+            folhasdepagamento.Add(folhaPagamento);
+            return true;
+        }
+        public static FolhaPagamento BuscarFolha(FolhaPagamento folhaPagamento)
         {
-            folhasdepagamento.Add(folha);
+            foreach (FolhaPagamento folhaCadastrado in folhasdepagamento)
+            {
+                if (folhaPagamento.Mes.Equals(folhaCadastrado.Mes))
+                {
+                    if (folhaPagamento.Ano.Equals(folhaCadastrado.Ano))
+                    {
+                        if (folhaPagamento.Funcionario.Equals(folhaCadastrado.Funcionario))
+                        {
+                            return folhaCadastrado;
+                        }
+                         
+                    }
+                    
+                }
+              
+            }
+            return null;
+
+
         }
 
+
+        /*  public static void AdicionarFolha(FolhaPagamento folha)
+          {
+              folhasdepagamento.Add(folha);
+          }*/
         public static List<FolhaPagamento> RetornarLista()
         {
             return folhasdepagamento;
         }
 
-        public static List<FolhaPagamento> BuscarFolha(FolhaPagamento folhaPagamento)
+       /* public static List<FolhaPagamento> BuscarFolha(FolhaPagamento folhaPagamento)
         {
             List<FolhaPagamento> folhasAuxFuncionario = new List<FolhaPagamento>();
             foreach (FolhaPagamento folhaCadastrada in folhasdepagamento)
@@ -32,6 +63,6 @@ namespace FolhadePagamento.DAL
                 }
             }
             return folhasAuxFuncionario;
-        }
+        }*/
     }
 }

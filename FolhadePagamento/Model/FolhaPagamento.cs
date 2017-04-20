@@ -24,6 +24,8 @@ namespace FolhadePagamento.Model
         public override string ToString()
         {
             return "Mês: " + Mes + " Ano: " + Ano + " Funcionario: " + Funcionario;
+
+            
         }
     }
 }
