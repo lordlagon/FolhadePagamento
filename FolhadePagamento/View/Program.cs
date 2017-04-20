@@ -108,15 +108,15 @@ namespace FolhadePagamento.View
                         
                         break;
 
-                   /* case "5":
+                   case "5":
                         //Consulta a folha de pagamento
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
-                        foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())
+                        foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.RetornarLista())
                         {
-                            Console.WriteLine("Funcionário: " + funcionarioCadastrado);
+                            Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                         }
-                        break;*/
+                        break;
 
                     case "0":
                         Console.Clear();
