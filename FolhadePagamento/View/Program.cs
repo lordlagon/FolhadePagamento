@@ -23,7 +23,7 @@ namespace FolhadePagamento.View
             do
             {
                 Console.Clear();
-                Console.WriteLine("\n        ______________Folha de Pagamento_______________");
+                Console.WriteLine("\n          ______________Folha de Pagamento_______________");
                 Console.WriteLine("         |                                               |");
                 Console.WriteLine("         |   1 - Cadastro de Funcionários                |");
                 Console.WriteLine("         |   2 - Lista de Funcionários                   |");
