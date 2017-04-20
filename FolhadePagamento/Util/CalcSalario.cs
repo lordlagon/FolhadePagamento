@@ -9,10 +9,12 @@ namespace FolhadePagamento.Util
 {
     class CalcSalario
     {
+        
         public static double CalcSalarioBruto(FolhaPagamento folha)
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
         }
+
         public static double CalcINSS(FolhaPagamento folha)
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
