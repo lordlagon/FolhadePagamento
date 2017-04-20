@@ -32,23 +32,18 @@ namespace FolhadePagamento.DAL
             };
             List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
             {
-                new folhasDePagamento()//hajsdhajs
+                new FolhaPagamento()
                 {
-                    Mes
-                    Nome = "Felipe",
-                    Cpf = "5"
+                    Funcionario = { Nome = "Gabriel", Cpf = "083.809.369-81" },
+                    Mes = 10,
+                    Ano = 2015,
+                    HorasTrabalhadas=0,
+                    ValorHora = 2.4,
+                
                 },
-                new folhasDePagamento()
-                {
-                    Nome = "Augusto",
-                    Cpf = "6"
-                },
-                new folhasDePagamento()
-                {
-                    Nome = "Rafaela",
-                    Cpf = "7"
-                },
-            };/*
+            };
+            
+            /*
             List<Produto> produtos = new List<Produto>
             {
                 new Produto()
