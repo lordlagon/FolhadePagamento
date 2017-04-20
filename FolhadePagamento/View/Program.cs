@@ -75,9 +75,8 @@ namespace FolhadePagamento.View
                         break;
 
                     case "3":
-                        
                         folhaPagamento = new FolhaPagamento();
-                        salario = new Salario();
+                        
                         Console.Clear();
                         Console.WriteLine(" -- Cadastrar Folha de Pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
