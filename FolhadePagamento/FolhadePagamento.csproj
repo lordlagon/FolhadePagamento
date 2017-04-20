@@ -46,8 +46,10 @@
     <Compile Include="DAL\Dados.cs" />
     <Compile Include="DAL\FolhaPagamentoDao.cs" />
     <Compile Include="DAL\FuncionarioDao.cs" />
+    <Compile Include="DAL\SalarioDao.cs" />
     <Compile Include="Model\FolhaPagamento.cs" />
     <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Model\Salario.cs" />
     <Compile Include="Util\CalcSalario.cs" />
     <Compile Include="Util\ValidaCPF.cs" />
     <Compile Include="View\Program.cs" />
