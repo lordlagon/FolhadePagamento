@@ -97,8 +97,7 @@ namespace FolhadePagamento.View
                             Console.WriteLine("//////Salario Bruto " + CalcSalario.CalcSalarioBruto(folhaPagamento));
 
                             FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
-
-
+                            
 
                         }
                         else
