@@ -11,7 +11,7 @@ namespace FolhadePagamento.DAL
     {
         private static List<FolhaPagamento> folhasdepagamento = new List<FolhaPagamento>();
 
-        public static bool AdcionarFolha (FolhaPagamento folhaPagamento)
+        public static bool AdicionarFolha (FolhaPagamento folhaPagamento)
         { if(BuscarFolha(folhaPagamento)!= null)
             {
                 return false;

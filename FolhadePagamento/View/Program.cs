@@ -26,10 +26,9 @@ namespace FolhadePagamento.View
                 Console.WriteLine("\n          ______________Folha de Pagamento_______________");
                 Console.WriteLine("         |                                               |");
                 Console.WriteLine("         |   1 - Cadastro de Funcionários                |");
-                Console.WriteLine("         |   2 - Lista de Funcionários                   |");
-                Console.WriteLine("         |   3 - Cadastro Folha de Pagamento             |");
-                Console.WriteLine("         |   4 - Consultar Folha de Pagamento            |");
-                Console.WriteLine("         |   5 - Listar Folhas de Pagamento              |");
+                Console.WriteLine("         |   2 - Cadastro Folha de Pagamento             |");
+                Console.WriteLine("         |   3 - Consultar Folha de Pagamento            |");
+                Console.WriteLine("         |   4 - Listar Folhas de Pagamento              |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -64,7 +63,7 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Não foi possível adicionar o Funcionario!");
                         }
                         break;
-                    case "2":
+                    /*case "2":
                         //Lista todos os funcionarios Cadastrados
                         Console.Clear();
                         Console.WriteLine(" -- Listar Funcionario -- \n");
@@ -72,9 +71,9 @@ namespace FolhadePagamento.View
                         {
                             Console.WriteLine("Funcionário: " + funcionarioCadastrado);
                         }
-                        break;
+                        break;*/
 
-                    case "3":
+                    case "2":
                         folhaPagamento = new FolhaPagamento();
                         
                         Console.Clear();
@@ -94,7 +93,7 @@ namespace FolhadePagamento.View
                             folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
-                            Console.WriteLine("//////Salario Bruto " + CalcSalario.CalcSalarioBruto(folhaPagamento));
+                            
 
                             FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
                             
@@ -142,7 +141,7 @@ namespace FolhadePagamento.View
 
                         break;*/
 
-                    case "5":
+                    case "4":
                         //Consulta a folha de pagamento
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");

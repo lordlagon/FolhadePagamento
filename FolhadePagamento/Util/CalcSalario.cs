@@ -10,14 +10,38 @@ namespace FolhadePagamento.Util
     class CalcSalario
     {
         
+
+
+
+
         public static double CalcSalarioBruto(FolhaPagamento folha)
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
         }
 
-        public static double CalcINSS(FolhaPagamento folha)
+        //Tabela Calculo INSS
+
+        
+        public static Salario CalcINSS(Salario salario)
         {
-            return folha.HorasTrabalhadas * folha.ValorHora;
+            if (salario.SalarioBruto < 1659.38)
+            {
+                salario.Inss = salario.SalarioBruto * 0.08;
+            }
+            if (salario.SalarioBruto >= 1659.39 && salario.SalarioBruto < 2765.66)
+            {
+                salario.Inss = salario.SalarioBruto * 0.09;
+            }
+            if (salario.SalarioBruto >= 2765.67 && salario.SalarioBruto <= 5531.31)
+            {
+                salario.Inss = salario.SalarioBruto * 0.11;
+            }
+            if (salario.SalarioBruto > 5531.31)
+            {
+                salario.Inss = 608.44;
+            }
+
+            return salario;
         }
         /*  
         a) Salário Bruto
