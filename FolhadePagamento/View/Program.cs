@@ -96,8 +96,9 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
                             folhaPagamento.SalarioBruto = CalcSalario.CalcSalarioBruto(folhaPagamento);
-                            Console.WriteLine("imposto de renda: " + CalcSalario.CalcFGTS(folhaPagamento).Fgts);
+                            Console.WriteLine("fgts: " + CalcSalario.CalcFGTS(folhaPagamento).Fgts);
                             Console.WriteLine("imposto de renda: " + CalcSalario.CalcImpRenda(folhaPagamento).ImpRenda);
+                            Console.WriteLine("salario liquido: " + CalcSalario.CalcLiquido(folhaPagamento).SalarioLiquido);
                             if (FolhaPagamentoDao.BuscarFolha(folhaPagamento) != null)
                             {
                                 FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
@@ -130,18 +131,14 @@ namespace FolhadePagamento.View
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
                             folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
-                            
                             foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAnoFunc(folhaPagamento))
                             {
-                            
                                 Console.WriteLine("Salário Bruto: " + folhaCadastrada.SalarioBruto);
                                 Console.WriteLine("Imposto de Renda: " + salario.ImpRenda);
                                 Console.WriteLine("INSS: " + salario.Inss);
                                 Console.WriteLine("FGTS: " + salario.Fgts);
                                 Console.WriteLine("Salário Líquido: " + salario.SalarioLiquido);
                             }
-                            Console.WriteLine("Saiu sem ver");
-
                         }
                         break;
 
