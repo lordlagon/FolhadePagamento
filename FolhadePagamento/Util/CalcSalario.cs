@@ -18,7 +18,7 @@ namespace FolhadePagamento.Util
         {
             return folha.SalarioBruto * 0.08;
         }
-        //Tabela Calculo INSS
+        //Tabela Calculo INSS CU
         
         public static Salario CalcINSS(FolhaPagamento folha)
         {
