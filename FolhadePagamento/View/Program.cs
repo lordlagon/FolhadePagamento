@@ -115,11 +115,10 @@ namespace FolhadePagamento.View
                         
                         break;
 
-                    /*case "4":
-                        folhaPagamento = new FolhaPagamento();
-
+                    case "3":
+                        //Consulta a folha de pagamento e calcula o salario
                         Console.Clear();
-                        Console.WriteLine(" -- Consultar Folha de Pagamento -- \n");
+                        Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
                         funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
@@ -131,22 +130,13 @@ namespace FolhadePagamento.View
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
                             folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine("Digite as horas Trabalhadas: ");
-                            folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine("Digite o Valor da hora Trabalhada: ");
-                            folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
-
-                            FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
-
+                            foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAnoFunc(folhaPagamento))
+                            {
+                                Console.WriteLine("Salário Bruto: " + folhaCadastrada.SalarioBruto);
+                                Console.WriteLine("Salário Bruto: " +);
+                            }
                         }
-                        else
-                        {
-                            Console.WriteLine("Funcionario não existe!");
-                            Console.WriteLine("Não foi possível adicionar a Folha de Pagamento");
-                        }
-
-
-                        break;*/
+                        break;
 
                     case "4":
                         //Consulta a folha de pagamento
