@@ -65,5 +65,18 @@ namespace FolhadePagamento.DAL
             }
             return folhasAuxFuncionario;
         }
+
+        public static List<FolhaPagamento> BuscarFolhaPorMesAnoFunc(FolhaPagamento folhaPagamento)
+        {
+            List<FolhaPagamento> folhasAuxFuncionario = new List<FolhaPagamento>();
+            foreach (FolhaPagamento folhaCadastrada in folhasdepagamento)
+            {
+                if (folhaCadastrada.Mes.Equals(folhaPagamento.Mes) && folhaCadastrada.Ano.Equals(folhaPagamento.Ano) && folhaPagamento.Funcionario.Cpf.Equals(folhaPagamento.Funcionario.Cpf))
+                {
+                    return folhasAuxFuncionario;
+                }
+            }
+            return null;
+        }
     }
 }
