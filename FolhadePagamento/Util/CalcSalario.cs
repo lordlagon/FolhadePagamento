@@ -15,7 +15,7 @@ namespace FolhadePagamento.Util
         }
         public static double CalcFGTS(FolhaPagamento folha)
         {
-            return folha.SalarioBruto * 0.08;
+            return folha.SalarioBruto * 1.08;
         }
         //Tabela Calculo INSS
         
