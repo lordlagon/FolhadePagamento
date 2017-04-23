@@ -9,7 +9,6 @@ namespace FolhadePagamento.DAL
 {
     class FolhaPagamentoDao
     {
-        private static List<FolhaPagamento> folhasdepagamento = new List<FolhaPagamento>();
 
         public static bool AdicionarFolha (FolhaPagamento folhaPagamento)
         {
