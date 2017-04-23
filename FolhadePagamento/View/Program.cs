@@ -95,8 +95,8 @@ namespace FolhadePagamento.View
                             folhaPagamento.HorasTrabalhadas = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
-                            folhaPagamento.SalarioBruto = CalcSalario.CalcFGTS(folhaPagamento);
-                            Console.WriteLine("imposto de renda: "+CalcSalario.CalcImpRenda(folhaPagamento).ImpRenda);
+                            folhaPagamento.SalarioBruto = CalcSalario.CalcSalarioBruto(folhaPagamento);
+                            Console.WriteLine("imposto de renda: "+CalcSalario.CalcFGTS(folhaPagamento));
 
                             if (FolhaPagamentoDao.BuscarFolha(folhaPagamento) != null)
                             {
