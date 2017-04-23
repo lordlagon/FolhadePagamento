@@ -77,7 +77,7 @@ namespace FolhadePagamento.Util
         {
             Salario salario = new Salario();
 
-                  salario.SalarioLiquido = folha.SalarioBruto- salario.ImpRenda - salario.Inss  ;
+                  salario.SalarioLiquido = folha.SalarioBruto - salario.ImpRenda - salario.Inss  ;
 
             return salario;
 
