@@ -14,9 +14,11 @@ namespace FolhadePagamento.Util
             return folha.HorasTrabalhadas * folha.ValorHora;
         }
 
-        public static double CalcFGTS(FolhaPagamento folha)
+        public static Salario CalcFGTS(FolhaPagamento folha)
         {
-            return folha.SalarioBruto * 0.08;
+            Salario salario = new Salario();
+            salario.Fgts = folha.SalarioBruto - (folha.SalarioBruto * 0.08);
+            return salario;
         }
         //Tabela Calculo INSS huashhuhasshuda
         
@@ -51,19 +53,19 @@ namespace FolhadePagamento.Util
             }
             if (folha.SalarioBruto >= 1903.99 && folha.SalarioBruto < 2826.65)
             {
-                salario.ImpRenda = folha.SalarioBruto-((folha.SalarioBruto * (7.5/100))-142.80);
+                salario.ImpRenda = folha.SalarioBruto-((folha.SalarioBruto * 0.075)-142.80);
             }
             if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * (15 / 100)) - 354.80);
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.15) - 354.80);
             }
             if (folha.SalarioBruto >= 3751.06 && folha.SalarioBruto <= 4664.68)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * (22.5 / 100)) - 636.13);
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.225) - 636.13);
             }
             if (folha.SalarioBruto > 4664.68)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * (27.5 / 100)) - 869.36);
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.275) - 869.36);
             }
             return salario;
         }
