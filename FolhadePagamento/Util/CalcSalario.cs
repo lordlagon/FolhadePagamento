@@ -76,9 +76,8 @@ namespace FolhadePagamento.Util
         public static Salario CalcLiquido(FolhaPagamento folha)
         {
             Salario salario = new Salario();
-           
-            //imposto de renda
-            salario.SalarioLiquido =folha.SalarioBruto - CalcImpRenda;
+
+                  salario.SalarioLiquido = salario.ImpRenda - salario.ImpRenda ;
 
             return salario;
 
