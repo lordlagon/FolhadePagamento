@@ -133,7 +133,7 @@ namespace FolhadePagamento.View
                             foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAnoFunc(folhaPagamento))
                             {
                                 Console.WriteLine("Salário Bruto: " + folhaCadastrada.SalarioBruto);
-                                Console.WriteLine("Salário Bruto: " +);
+                                Console.WriteLine("Salário Bruto: " );
                             }
                         }
                         break;
