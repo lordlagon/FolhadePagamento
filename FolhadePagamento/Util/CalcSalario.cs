@@ -13,9 +13,10 @@ namespace FolhadePagamento.Util
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
         }
+
         public static double CalcFGTS(FolhaPagamento folha)
         {
-            return folha.SalarioBruto * 0.08;
+            return folha.SalarioBruto - 0.08;
         }
         //Tabela Calculo INSS
         
@@ -54,15 +55,15 @@ namespace FolhadePagamento.Util
             }
             if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
-                salario.Inss = folha.SalarioBruto * 0.11;
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * (15 / 100)) - 354.80);
             }
             if (folha.SalarioBruto >= 3751.06 && folha.SalarioBruto <= 4664.68)
             {
-                salario.Inss = folha.SalarioBruto * 0.11;
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * (22.5 / 100)) - 636.13);
             }
             if (folha.SalarioBruto > 4664.68)
             {
-                salario.Inss = 608.44;
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * (27.5 / 100)) - 869.36);
             }
             return salario;
         }
