@@ -9,6 +9,8 @@ namespace FolhadePagamento.Util
 {
     class CalcSalario
     {
+     
+
         public static double CalcSalarioBruto(FolhaPagamento folha)
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
@@ -21,7 +23,7 @@ namespace FolhadePagamento.Util
             return salario;
         }
         //Tabela Calculo INSS huashhuhasshuda
-        
+
         public static Salario CalcINSS(FolhaPagamento folha)
         {
             Salario salario = new Salario();
@@ -53,7 +55,7 @@ namespace FolhadePagamento.Util
             }
             if (folha.SalarioBruto >= 1903.99 && folha.SalarioBruto < 2826.65)
             {
-                salario.ImpRenda = folha.SalarioBruto-((folha.SalarioBruto * 0.075)-142.80);
+                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.075) - 142.80);
             }
             if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
@@ -68,9 +70,20 @@ namespace FolhadePagamento.Util
                 salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.275) - 869.36);
             }
             return salario;
+
         }
 
+        public static Salario CalcLiquido(FolhaPagamento folha)
+        {
+            Salario salario = new Salario();
+           
+            //imposto de renda
+            salario.SalarioLiquido =folha.SalarioBruto - CalcImpRenda;
+
+            return salario;
 
 
+
+        }
     }
 }
