@@ -46,17 +46,21 @@ namespace FolhadePagamento.Util
             Salario salario = new Salario();
             if (folha.SalarioBruto < 1903.98)
             {
-                salario.Inss = folha.SalarioBruto * 0.08;
+                salario.ImpRenda = folha.SalarioBruto;
             }
-            if (folha.SalarioBruto >= 1659.39 && folha.SalarioBruto < 2765.66)
+            if (folha.SalarioBruto >= 1903.99 && folha.SalarioBruto < 2826.65)
             {
-                salario.Inss = folha.SalarioBruto * 0.09;
+                salario.ImpRenda = folha.SalarioBruto-((folha.SalarioBruto * 7.5)-142.80);
             }
-            if (folha.SalarioBruto >= 2765.67 && folha.SalarioBruto <= 5531.31)
+            if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
                 salario.Inss = folha.SalarioBruto * 0.11;
             }
-            if (folha.SalarioBruto > 5531.31)
+            if (folha.SalarioBruto >= 3751.06 && folha.SalarioBruto <= 4664.68)
+            {
+                salario.Inss = folha.SalarioBruto * 0.11;
+            }
+            if (folha.SalarioBruto > 4664.68)
             {
                 salario.Inss = 608.44;
             }
