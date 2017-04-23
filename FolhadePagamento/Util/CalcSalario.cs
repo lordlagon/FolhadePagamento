@@ -50,7 +50,7 @@ namespace FolhadePagamento.Util
             }
             if (folha.SalarioBruto >= 1903.99 && folha.SalarioBruto < 2826.65)
             {
-                salario.ImpRenda = folha.SalarioBruto-((folha.SalarioBruto * 7.5)-142.80);
+                salario.ImpRenda = folha.SalarioBruto-((folha.SalarioBruto * (7.5/100))-142.80);
             }
             if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
