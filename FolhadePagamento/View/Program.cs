@@ -126,6 +126,7 @@ namespace FolhadePagamento.View
 
                         if (funcionario != null)
                         {
+                            folhaPagamento = new FolhaPagamento();
                             folhaPagamento.Funcionario = funcionario;
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
@@ -139,6 +140,7 @@ namespace FolhadePagamento.View
                                 Console.WriteLine("FGTS: " + salario.Fgts);
                                 Console.WriteLine("Salário Líquido: " + salario.SalarioLiquido);
                             }
+                            
                         }
                         break;
 

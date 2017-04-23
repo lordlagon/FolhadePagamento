@@ -19,7 +19,7 @@ namespace FolhadePagamento.Util
         public static Salario CalcFGTS(FolhaPagamento folha)
         {
             Salario salario = new Salario();
-            salario.Fgts = folha.SalarioBruto - (folha.SalarioBruto * 0.08);
+            salario.Fgts = folha.SalarioBruto * 0.08;
             return salario;
         }
         //Tabela Calculo INSS huashhuhasshuda
