@@ -22,7 +22,7 @@ namespace FolhadePagamento.Util
 
             return salario.Fgts;
         }
-        //Tabela Calculo INSS
+        //Tabela Calculo INSS huashhuhasshuda
         
         public static Salario CalcINSS(FolhaPagamento folha)
         {
