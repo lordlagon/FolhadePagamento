@@ -31,7 +31,7 @@ namespace FolhadePagamento.DAL
                 new Funcionario()
                 {
                     Nome = "Ale",
-                    Cpf = "116.205.589.80"
+                    Cpf = "116.205.589-80"
                 },
 
             };
