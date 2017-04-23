@@ -12,14 +12,15 @@ namespace FolhadePagamento.DAL
         private static List<FolhaPagamento> folhasdepagamento = new List<FolhaPagamento>();
 
         public static bool AdicionarFolha (FolhaPagamento folhaPagamento)
-        { if(BuscarFolha(folhaPagamento)!= null)
+        {
+            if (BuscarFolha(folhaPagamento)!= null)
             {
                 return false;
             }
             folhasdepagamento.Add(folhaPagamento);
             return true;
         }
-        public static FolhaPagamento BuscarFolha(FolhaPagamento folhaPagamento)
+        /*public static FolhaPagamento BuscarFolha(FolhaPagamento folhaPagamento)
         {
             foreach (FolhaPagamento folhaCadastrado in folhasdepagamento)
             {
@@ -40,7 +41,7 @@ namespace FolhadePagamento.DAL
             return null;
 
 
-        }
+        }*/
 
 
         /*  public static void AdicionarFolha(FolhaPagamento folha)
@@ -52,7 +53,7 @@ namespace FolhadePagamento.DAL
             return folhasdepagamento;
         }
 
-       /* public static List<FolhaPagamento> BuscarFolha(FolhaPagamento folhaPagamento)
+        public static List<FolhaPagamento> BuscarFolha(FolhaPagamento folhaPagamento)
         {
             List<FolhaPagamento> folhasAuxFuncionario = new List<FolhaPagamento>();
             foreach (FolhaPagamento folhaCadastrada in folhasdepagamento)
@@ -63,6 +64,6 @@ namespace FolhadePagamento.DAL
                 }
             }
             return folhasAuxFuncionario;
-        }*/
+        }
     }
 }
