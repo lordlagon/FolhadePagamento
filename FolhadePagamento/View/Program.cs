@@ -29,7 +29,7 @@ namespace FolhadePagamento.View
                 Console.WriteLine("         |   2 - Cadastro Folha de Pagamento             |");
                 Console.WriteLine("         |   3 - Consultar Folha de Pagamento            |");
                 Console.WriteLine("         |   4 - Listar Folhas de Pagamento              |");
-                Console.WriteLine("         |   5 - Listar Funcionarios de Pagamento              |");
+                Console.WriteLine("         |   5 - Listar Funcionarios                     |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -96,9 +96,12 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
                             folhaPagamento.SalarioBruto = CalcSalario.CalcSalarioBruto(folhaPagamento);
-
-                            FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
-                            
+                            if (FolhaPagamentoDao.BuscarFolha(folhaPagamento) != null)
+                            {
+                                FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
+                                Console.WriteLine("Cadastrado com sucesso!");
+                            }
+                            else { Console.WriteLine("Deu merda"); }
 
                         }
                         else
