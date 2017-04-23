@@ -29,6 +29,7 @@ namespace FolhadePagamento.View
                 Console.WriteLine("         |   2 - Cadastro Folha de Pagamento             |");
                 Console.WriteLine("         |   3 - Consultar Folha de Pagamento            |");
                 Console.WriteLine("         |   4 - Listar Folhas de Pagamento              |");
+                Console.WriteLine("         |   5 - Listar Funcionarios de Pagamento              |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -63,7 +64,7 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Não foi possível adicionar o Funcionario!");
                         }
                         break;
-                    /*case "2":
+                    case "5":
                         //Lista todos os funcionarios Cadastrados
                         Console.Clear();
                         Console.WriteLine(" -- Listar Funcionario -- \n");
@@ -71,7 +72,7 @@ namespace FolhadePagamento.View
                         {
                             Console.WriteLine("Funcionário: " + funcionarioCadastrado);
                         }
-                        break;*/
+                        break;
 
                     case "2":
                         folhaPagamento = new FolhaPagamento();
