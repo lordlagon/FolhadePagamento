@@ -136,8 +136,8 @@ namespace FolhadePagamento.View
                             {
                                 Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                             }
-                            
-                        }
+
+                        }else { Console.WriteLine("Funcionario não localzado!"); }
                         break;
 
                     case "6":
