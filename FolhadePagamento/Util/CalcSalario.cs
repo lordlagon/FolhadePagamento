@@ -9,8 +9,6 @@ namespace FolhadePagamento.Util
 {
     class CalcSalario
     {
-     
-
         public static double CalcSalarioBruto(FolhaPagamento folha)
         {
             return folha.HorasTrabalhadas * folha.ValorHora;
@@ -18,71 +16,66 @@ namespace FolhadePagamento.Util
 
         public static Salario CalcFGTS(FolhaPagamento folha)
         {
-            Salario salario = new Salario();
-            salario.Fgts = folha.SalarioBruto * 0.08;
-            return salario;
+            folha.Salario.Fgts = folha.SalarioBruto * 0.08;
+            return folha.Salario;
         }
         //Tabela Calculo INSS huashhuhasshuda
 
         public static Salario CalcINSS(FolhaPagamento folha)
         {
-            Salario salario = new Salario();
             if (folha.SalarioBruto < 1659.38)
             {
-                salario.Inss = folha.SalarioBruto * 0.08;
+                folha.Salario.Inss = folha.SalarioBruto * 0.08;
             }
             if (folha.SalarioBruto >= 1659.39 && folha.SalarioBruto < 2765.66)
             {
-                salario.Inss = folha.SalarioBruto * 0.09;
+                folha.Salario.Inss = folha.SalarioBruto * 0.09;
             }
             if (folha.SalarioBruto >= 2765.67 && folha.SalarioBruto <= 5531.31)
             {
-                salario.Inss = folha.SalarioBruto * 0.11;
+                folha.Salario.Inss = folha.SalarioBruto * 0.11;
             }
             if (folha.SalarioBruto > 5531.31)
             {
-                salario.Inss = 608.44;
+                folha.Salario.Inss = 608.44;
             }
-            return salario;
+            return folha.Salario;
         }
 
         public static Salario CalcImpRenda(FolhaPagamento folha)
         {
-            Salario salario = new Salario();
             if (folha.SalarioBruto < 1903.98)
             {
-                salario.ImpRenda = folha.SalarioBruto;
+                folha.Salario.ImpRenda = 0;
             }
             if (folha.SalarioBruto >= 1903.99 && folha.SalarioBruto < 2826.65)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.075) - 142.80);
+                folha.Salario.ImpRenda = (folha.SalarioBruto * 0.075) - 142.80;
             }
             if (folha.SalarioBruto >= 2826.66 && folha.SalarioBruto <= 3751.05)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.15) - 354.80);
+                folha.Salario.ImpRenda = (folha.SalarioBruto * 0.15) - 354.80;
             }
             if (folha.SalarioBruto >= 3751.06 && folha.SalarioBruto <= 4664.68)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.225) - 636.13);
+                folha.Salario.ImpRenda = (folha.SalarioBruto * 0.225) - 636.13;
             }
             if (folha.SalarioBruto > 4664.68)
             {
-                salario.ImpRenda = folha.SalarioBruto - ((folha.SalarioBruto * 0.275) - 869.36);
+                folha.Salario.ImpRenda = (folha.SalarioBruto * 0.275) - 869.36;
             }
-            return salario;
+            return folha.Salario;
 
         }
 
         public static Salario CalcLiquido(FolhaPagamento folha)
         {
-            Salario salario = new Salario();
+                  folha.Salario.SalarioLiquido = folha.SalarioBruto - folha.Salario.ImpRenda - folha.Salario.Inss  ;
 
-                  salario.SalarioLiquido = folha.SalarioBruto - salario.ImpRenda - salario.Inss  ;
-
-            return salario;
+            return folha.Salario;
 
 
-
+            //ihhhhhhh rapaz olha quem debugou essa porra
         }
     }
 }

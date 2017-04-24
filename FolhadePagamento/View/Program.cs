@@ -96,6 +96,10 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Digite o Valor da hora Trabalhada: ");
                             folhaPagamento.ValorHora = Convert.ToDouble(Console.ReadLine());
                             folhaPagamento.SalarioBruto = CalcSalario.CalcSalarioBruto(folhaPagamento);
+                            CalcSalario.CalcImpRenda(folhaPagamento);
+                            CalcSalario.CalcINSS(folhaPagamento);
+                            CalcSalario.CalcFGTS(folhaPagamento);
+                            CalcSalario.CalcLiquido(folhaPagamento);
                             if (FolhaPagamentoDao.BuscarFolha(folhaPagamento) != null)
                             {
                                 FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
@@ -131,11 +135,7 @@ namespace FolhadePagamento.View
                             folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
                             foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAnoFunc(folhaPagamento))
                             {
-                                Console.WriteLine("Salário Bruto: " + folhaCadastrada.SalarioBruto);
-                                Console.WriteLine("Imposto de Renda: " + salario.ImpRenda);
-                                Console.WriteLine("INSS: " + salario.Inss);
-                                Console.WriteLine("FGTS: " + salario.Fgts);
-                                Console.WriteLine("Salário Líquido: " + salario.SalarioLiquido);
+                                Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                             }
                             
                         }

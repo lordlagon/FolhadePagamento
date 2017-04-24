@@ -13,16 +13,18 @@ namespace FolhadePagamento.Model
         public int HorasTrabalhadas { get; set; }
         public Double ValorHora { get; set; }
         public Funcionario Funcionario { get; set; }
+        public Salario Salario { get; set; }
         public Double SalarioBruto { get; set; }
-
+        
         public FolhaPagamento()
         {
             Funcionario = new Funcionario();
+            Salario = new Salario();
         }
 
         public override string ToString()
         {
-            return "Mês: " + Mes + " Ano: " + Ano + " Funcionario: " + Funcionario + " Salário Bruto: "+ SalarioBruto;
+            return "Mês: " + Mes + " Ano: " + Ano + " Funcionario: " + Funcionario + " Salário Bruto: " + SalarioBruto + Salario;
         }
     }
 }
