@@ -164,7 +164,7 @@ namespace FolhadePagamento.View
                         break;
                 }
             } while (!opcao.Equals("0")) ;
-        } 
+        }
     }
 }
 
