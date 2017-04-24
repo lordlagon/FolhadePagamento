@@ -72,12 +72,12 @@ namespace FolhadePagamento.View
                         Console.Clear();
                         Console.WriteLine(" -- Cadastrar Folha de Pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(folhaPagamento.Funcionario);
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
 
-                        if (folhaPagamento.Funcionario != null)
+                        if (funcionario != null)
                         {
-                            folhaPagamento.Funcionario = folhaPagamento.Funcionario;
+                            folhaPagamento.Funcionario = funcionario;
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
@@ -92,12 +92,14 @@ namespace FolhadePagamento.View
                             CalcSalario.CalcINSS(folhaPagamento);
                             CalcSalario.CalcFGTS(folhaPagamento);
                             CalcSalario.CalcLiquido(folhaPagamento);
-                                                      
-                            FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
-                            Console.WriteLine("Cadastrado com sucesso!");
-                            
 
-
+                            if (FolhaPagamentoDao.BuscarFolhaPorMesAno(folhaPagamento) != null)
+                            {
+                                FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
+                                Console.WriteLine("Cadastrado com sucesso!");
+                            }
+                            else { Console.WriteLine("Deu merda");
+                            }
                         }
                         else
                         {
@@ -112,8 +114,8 @@ namespace FolhadePagamento.View
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
+                        folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(folhaPagamento.Funcionario);
 
                         if (funcionario != null)
                         {

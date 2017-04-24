@@ -15,10 +15,11 @@ namespace FolhadePagamento.DAL
         {
             if (BuscarFolha(folhaPagamento) != null)
             {
-                return false;
+                folhasdepagamento.Add(folhaPagamento);
+                return true;
             }
-            folhasdepagamento.Add(folhaPagamento);
-            return true;
+            return false;
+
         }
         /*public static FolhaPagamento BuscarFolha(FolhaPagamento folhaPagamento)
         {
