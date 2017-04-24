@@ -65,16 +65,7 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Não foi possível adicionar o Funcionario!");
                         }
                         break;
-                    case "5":
-                        //Lista todos os funcionarios Cadastrados
-                        Console.Clear();
-                        Console.WriteLine(" -- Listar Funcionario -- \n");
-                        foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())
-                        {
-                            Console.WriteLine("Funcionário: " + funcionarioCadastrado);
-                        }
-                        break;
-
+                    
                     case "2":
                         folhaPagamento = new FolhaPagamento();
                         
@@ -139,6 +130,25 @@ namespace FolhadePagamento.View
                             }
 
                         }else { Console.WriteLine("Funcionario não localzado!"); }
+                        break;
+
+                    case "4":
+                        //Consulta a folha de pagamento
+                        Console.Clear();
+                        Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
+                        foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.RetornarLista())
+                        {
+                            Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
+                        }
+                        break;
+                    case "5":
+                        //Lista todos os funcionarios Cadastrados
+                        Console.Clear();
+                        Console.WriteLine(" -- Listar Funcionario -- \n");
+                        foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())
+                        {
+                            Console.WriteLine("Funcionário: " + funcionarioCadastrado);
+                        }
                         break;
 
 
