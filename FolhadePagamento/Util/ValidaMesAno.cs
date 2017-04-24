@@ -12,9 +12,9 @@ namespace FolhadePagamento.Util
         {
             if (ano < 1950 || ano < DateTime.Now.Year + 1)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
             
         }
 
