@@ -162,12 +162,13 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Funcionário: " + funcionarioCadastrado);
                         }
                         break;
+                }
                         Console.WriteLine("Aperte uma tecla para continuar");
                         Console.ReadKey();
 
 
 
-                }
+                
             } while (!opcao.Equals("0")) ;
         } 
     }
