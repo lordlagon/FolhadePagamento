@@ -13,7 +13,6 @@ namespace FolhadePagamento.View
     {
         static void Main(string[] args)
         {
-
             Dados.Inicializar();
             string opcao = null;
             Funcionario funcionario = new Funcionario();
@@ -45,7 +44,7 @@ namespace FolhadePagamento.View
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine()); //Valida o CPf e salva com a Mascará
 
-                        if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
+                        if (ValidaCPF.Cpf(funcionario.Cpf) == true)
                         {
                             if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
                             {
@@ -101,7 +100,6 @@ namespace FolhadePagamento.View
                                     else
                                     {
                                         Console.WriteLine("Já existe uma folha cadastrada para o período");
-                                        Console.WriteLine("Não foi possível adicionar a Folha de Pagamento");
                                     }
                                 }
                                 else
@@ -218,14 +216,10 @@ namespace FolhadePagamento.View
                         }
                         break;
                 }
-                        Console.WriteLine("Aperte uma tecla para continuar");
-                        Console.ReadKey();
-
-
-
-                
-            } while (!opcao.Equals("0")) ;
-        } 
+                Console.WriteLine("Aperte uma tecla para continuar");
+                Console.ReadKey();
+            } while (!opcao.Equals("0"));
+        }
     }
 }
 

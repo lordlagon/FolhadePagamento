@@ -40,45 +40,8 @@ namespace FolhadePagamento.DAL
                 },
 
             };
-            /*List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
-            {
-                new FolhaPagamento()
-                {
-                    Funcionario = { Nome = "Gabriel", Cpf = "083.809.369-81" },
-                    Mes = 10,
-                    Ano = 15,
-                    HorasTrabalhadas=44,
-                    ValorHora = 2.4,
-                    SalarioBruto = 44*2.4,
-
-                },
-            };
-            */
-            
-            /*
-            List<Produto> produtos = new List<Produto>
-            {
-                new Produto()
-                {
-                    Nome = "Arroz",
-                    Markup = 2,
-                    Preco = 2
-                },
-                new Produto()
-                {
-                    Nome = "Feijão",
-                    Markup = 3,
-                    Preco = 3
-                },
-                new Produto()
-                {
-                    Nome = "Macarrão",
-                    Markup = 4,
-                    Preco = 4
-                },
-            };*/
             funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
-            //folhasDePagamento.ForEach(x => FolhaPagamentoDao.AdicionarFolha(x));
+            
 
         }
     }
