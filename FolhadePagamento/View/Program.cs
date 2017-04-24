@@ -46,7 +46,7 @@ namespace FolhadePagamento.View
                         funcionario.Nome = Console.ReadLine();
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine()); //Valida o CPf e salva com a Mascará
-                                                
+
                         if (Util.ValidaCPF.Cpf(funcionario.Cpf) == true)
                         {
                             if (FuncionarioDao.AdicionarFuncionario(funcionario) == true)
@@ -65,17 +65,17 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Não foi possível adicionar o Funcionario!");
                         }
                         break;
-                    
+
                     case "2":
                         folhaPagamento = new FolhaPagamento();
-                        
+
                         Console.Clear();
                         Console.WriteLine(" -- Cadastrar Folha de Pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
                         funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
 
-                        if(funcionario != null)
+                        if (funcionario != null)
                         {
                             folhaPagamento.Funcionario = funcionario;
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
@@ -105,8 +105,8 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Funcionario não existe!");
                             Console.WriteLine("Não foi possível adicionar a Folha de Pagamento");
                         }
-                            
-                        
+
+
                         break;
 
                     case "3":
@@ -129,28 +129,9 @@ namespace FolhadePagamento.View
                                 Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                             }
 
-                        }else { Console.WriteLine("Funcionario não localzado!"); }
-                        break;
-
-                    case "4":
-                        //Consulta a folha de pagamento
-                        Console.Clear();
-                        Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
-                        foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.RetornarLista())
-                        {
-                            Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                         }
+                        else { Console.WriteLine("Funcionario não localzado!"); }
                         break;
-                    case "5":
-                        //Lista todos os funcionarios Cadastrados
-                        Console.Clear();
-                        Console.WriteLine(" -- Listar Funcionario -- \n");
-                        foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())
-                        {
-                            Console.WriteLine("Funcionário: " + funcionarioCadastrado);
-                        }
-                        break;
-
 
                     case "4":
                         folhaPagamento = new FolhaPagamento();
@@ -171,10 +152,22 @@ namespace FolhadePagamento.View
                         Console.WriteLine("\nTotal salário líquido: " + salarioLiquidoTotal.ToString("C2"));
                         Console.WriteLine("\nTotal salário bruto: " + salarioBrutoTotal.ToString("C2"));
                         break;
-                }
 
-            } while (!opcao.Equals("0"));
-        }
+                    case "5":
+                        //Lista todos os funcionarios Cadastrados
+                        Console.Clear();
+                        Console.WriteLine(" -- Listar Funcionario -- \n");
+                        foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())
+                        {
+                            Console.WriteLine("Funcionário: " + funcionarioCadastrado);
+                        }
+                        break;
+
+
+
+                }
+            } while (!opcao.Equals("0")) ;
+        } 
     }
 }
 
