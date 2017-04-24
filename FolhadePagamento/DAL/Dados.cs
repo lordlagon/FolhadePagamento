@@ -33,6 +33,11 @@ namespace FolhadePagamento.DAL
                     Nome = "Ale",
                     Cpf = "116.205.589-80"
                 },
+                new Funcionario()
+                {
+                    Nome = "Diogo",
+                    Cpf = "088.408.549-08"
+                },
 
             };
             List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
