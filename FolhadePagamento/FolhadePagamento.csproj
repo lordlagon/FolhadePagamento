@@ -52,6 +52,7 @@
     <Compile Include="Model\Salario.cs" />
     <Compile Include="Util\CalcSalario.cs" />
     <Compile Include="Util\ValidaCPF.cs" />
+    <Compile Include="Util\ValidaMesAno.cs" />
     <Compile Include="View\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
