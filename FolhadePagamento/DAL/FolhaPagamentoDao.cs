@@ -18,7 +18,9 @@ namespace FolhadePagamento.DAL
                 folhasdepagamento.Add(folhaPagamento);
                 return true;
             }
+            folhasdepagamento.Add(folhaPagamento);
             return false;
+
 
         }
         /*public static FolhaPagamento BuscarFolha(FolhaPagamento folhaPagamento)
