@@ -129,7 +129,6 @@ namespace FolhadePagamento.View
 
                         if (folhaPagamento.Funcionario != null)
                         {
-                            folhaPagamento = new FolhaPagamento();
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
@@ -138,8 +137,8 @@ namespace FolhadePagamento.View
                             {
                                 Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                             }
-                            
-                        }
+
+                        }else { Console.WriteLine("Funcionario não localzado!"); }
                         break;
 
 
