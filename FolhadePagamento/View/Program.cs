@@ -141,7 +141,7 @@ namespace FolhadePagamento.View
                         }
                         break;
 
-                    case "4":
+                    case "6":
                         //Consulta a folha de pagamento
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
