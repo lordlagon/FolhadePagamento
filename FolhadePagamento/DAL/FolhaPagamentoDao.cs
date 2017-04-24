@@ -73,10 +73,10 @@ namespace FolhadePagamento.DAL
             {
                 if (folhaCadastrada.Mes.Equals(folhaPagamento.Mes) && folhaCadastrada.Ano.Equals(folhaPagamento.Ano) && folhaPagamento.Funcionario.Cpf.Equals(folhaPagamento.Funcionario.Cpf))
                 {
-                    return folhasAuxFuncionario;
+                    folhasAuxFuncionario.Add(folhaCadastrada);
                 }
             }
-            return null;
+            return folhasAuxFuncionario;
         }
     }
 }
