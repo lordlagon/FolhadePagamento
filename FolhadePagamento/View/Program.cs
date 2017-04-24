@@ -30,6 +30,7 @@ namespace FolhadePagamento.View
                 Console.WriteLine("         |   3 - Consultar Folha de Pagamento            |");
                 Console.WriteLine("         |   4 - Listar Folhas de Pagamento              |");
                 Console.WriteLine("         |   5 - Listar Funcionarios                     |");
+                Console.WriteLine("         |   6 - Listar folha de pagamentos                     |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -140,21 +141,40 @@ namespace FolhadePagamento.View
                         }
                         break;
 
-                    case "6":
-                        //Consulta a folha de pagamento
-                        Console.Clear();
-                        Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
-                        foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.RetornarLista())
-                        {
-                            Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
-                        }
-                        break;
 
-                    case "0":
+                    case "6":
+                        folhaPagamento = new FolhaDePagamento();
                         Console.Clear();
-                        break;
-                    default:
-                        Console.WriteLine("Opção Invalida");
+                        Console.WriteLine(" -- Listar Folha de Pagamento -- \n");
+                        Console.WriteLine("Digite o Mês: ");
+                        folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Digite o Ano: ");
+                        folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
+                        salario = 0;
+                        SalarioLiquido = 0;
+                        Console.WriteLine("--------------------------------");
+
+                        foreach (FolhaDePagamento folhaCadastrada in FolhaDePagamentoDAO.BuscarFolhaPorDataAno(folhaPagamento))
+                        {
+                            Console.WriteLine("\nNome: " + folhaCadastrada.funcionario.Nome);
+                            Console.WriteLine("\nCPF: " + folhaCadastrada.funcionario.CPF);
+                            Console.WriteLine("Mês: " + folhaCadastrada.Mes);
+                            Console.WriteLine("Ano: " + folhaCadastrada.Ano);
+                            Console.WriteLine("Salário Bruto: " + folhaCadastrada.SalarioBruto);
+                            Console.WriteLine("Imposto de Renda: " + folhaCadastrada.ImpostoRenda);
+                            Console.WriteLine("INSS: " + folhaCadastrada.INSS);
+                            Console.WriteLine("FGTS: " + folhaCadastrada.FGTS);
+                            Console.WriteLine("Salario Líquido: " + folhaCadastrada.SalarioLiquido);
+                            totalSbruto += folhaCadastrada.SalarioBruto;
+                            totalSLiquido += folhaCadastrada.SalarioLiquido;
+                        }
+                        Console.WriteLine("\nTotal salário líquido: " + totalSLiquido.ToString("C2"));
+                        Console.WriteLine("\nTotal salário bruto: " + totalSbruto.ToString("C2"));
+                        Console.WriteLine("--------------------------------");
+                        Console.WriteLine("Digite uma tecla para continuar");
+                        prosseguir = Console.ReadLine();
+
+
                         break;
                 }
                 Console.WriteLine("Aperte uma tecla para continuar");
