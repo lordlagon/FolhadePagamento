@@ -115,7 +115,6 @@ namespace FolhadePagamento.View
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
                         folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(folhaPagamento.Funcionario);
 
                         if (funcionario != null)
                         {
