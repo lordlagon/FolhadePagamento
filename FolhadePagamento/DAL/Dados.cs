@@ -33,6 +33,11 @@ namespace FolhadePagamento.DAL
                     Nome = "Ale",
                     Cpf = "116.205.589-80"
                 },
+                new Funcionario()
+                {
+                    Nome = "Diogo",
+                    Cpf = "088.408.549-08"
+                },
 
             };
             /*List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
@@ -47,7 +52,8 @@ namespace FolhadePagamento.DAL
                     SalarioBruto = 44*2.4,
 
                 },
-            };*/
+            };
+            */
             
             /*
             List<Produto> produtos = new List<Produto>
@@ -72,7 +78,7 @@ namespace FolhadePagamento.DAL
                 },
             };*/
             funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
-            // folhasDePagamento.ForEach(x => FolhaPagamentoDao.AdicionarFolha(x));
+            //folhasDePagamento.ForEach(x => FolhaPagamentoDao.AdicionarFolha(x));
 
         }
     }
