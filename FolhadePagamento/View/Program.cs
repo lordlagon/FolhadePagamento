@@ -126,7 +126,7 @@ namespace FolhadePagamento.View
                         folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
                         folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
 
-                        if (funcionario != null)
+                        if (folhaPagamento.Funcionario != null)
                         {
                             folhaPagamento = new FolhaPagamento();
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
@@ -141,7 +141,7 @@ namespace FolhadePagamento.View
                         }
                         break;
 
-                    case "4":
+                    case "6":
                         //Consulta a folha de pagamento
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
