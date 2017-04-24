@@ -76,7 +76,7 @@ namespace FolhadePagamento.View
                         if (folhaPagamento.Funcionario != null)
                         {
                             //folhaPagamento.Funcionario = funcionario;
-                            Console.WriteLine("Digite o Mês da Trabalhado: (1 a 12)");
+                            Console.WriteLine("Digite número do Mês Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             if (ValidaMesAno.ValidaMes(folhaPagamento.Mes) == true)
                             {
@@ -132,7 +132,7 @@ namespace FolhadePagamento.View
 
                         if (folhaPagamento.Funcionario != null)
                         {
-                            Console.WriteLine("Digite o Mês da Trabalhado: (1 a 12)");
+                            Console.WriteLine("Digite número do Mês Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             if (ValidaMesAno.ValidaMes(folhaPagamento.Mes) == true)
                             {
@@ -166,7 +166,7 @@ namespace FolhadePagamento.View
                         folhaPagamento = new FolhaPagamento();
                         Console.Clear();
                         Console.WriteLine(" -- Listar Folha de Pagamento -- \n");
-                        Console.WriteLine("Digite o Mês da Trabalhado: (1 a 12)");
+                        Console.WriteLine("Digite número do Mês Trabalhado: ");
                         folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                         if (ValidaMesAno.ValidaMes(folhaPagamento.Mes) == true)
                         {

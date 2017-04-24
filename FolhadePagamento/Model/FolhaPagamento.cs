@@ -24,7 +24,7 @@ namespace FolhadePagamento.Model
 
         public override string ToString()
         {
-            return "\nFolha de Pagamento \n--------------------------------------\nFuncionario: " + Funcionario.Nome + " Mês: " + Mes + " Ano: " + Ano +  "\nSalário Bruto: " + SalarioBruto.ToString("C2") + "\n" + Salario+ "\n----------------------\n";
+            return "\nFolha de Pagamento: Mês: " + Mes + " Ano: " + Ano +"\n--------------------------------------\n\nFuncionario: " + Funcionario.Nome + "\nSalário Bruto: " + SalarioBruto.ToString("C2") + "\n\n" + Salario+ "\n--------------------------------------\n";
         }
     }
 }
