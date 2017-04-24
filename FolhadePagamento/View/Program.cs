@@ -177,7 +177,7 @@ namespace FolhadePagamento.View
                         }
                         break;
                 }
-                        Console.WriteLine("\n Aperte uma tecla para continuar");
+                        Console.WriteLine("\nAperte uma tecla para continuar");
                         Console.ReadKey();
 
 
