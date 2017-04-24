@@ -95,7 +95,7 @@ namespace FolhadePagamento.View
                                 CalcSalario.CalcFGTS(folhaPagamento);
                                 CalcSalario.CalcLiquido(folhaPagamento);
                                 FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
-                                Console.WriteLine("/nFolha Cadastrada com sucesso!");
+                                Console.WriteLine("\nFolha Cadastrada com sucesso!");
 
                             }
                             else
