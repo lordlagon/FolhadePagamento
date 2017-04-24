@@ -112,10 +112,10 @@ namespace FolhadePagamento.View
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
+                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
 
-                        if (folhaPagamento.Funcionario != null)
+                        if (funcionario != null)
                         {
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
