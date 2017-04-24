@@ -47,7 +47,8 @@ namespace FolhadePagamento.DAL
                     SalarioBruto = 44*2.4,
 
                 },
-            };*/
+            };
+            */
             
             /*
             List<Produto> produtos = new List<Produto>
@@ -72,7 +73,7 @@ namespace FolhadePagamento.DAL
                 },
             };*/
             funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
-            folhasDePagamento.ForEach(x => FolhaPagamentoDao.AdicionarFolha(x));
+            //folhasDePagamento.ForEach(x => FolhaPagamentoDao.AdicionarFolha(x));
 
         }
     }
