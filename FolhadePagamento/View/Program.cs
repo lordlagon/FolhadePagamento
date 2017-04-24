@@ -29,8 +29,6 @@ namespace FolhadePagamento.View
                 Console.WriteLine("         |   2 - Cadastro Folha de Pagamento             |");
                 Console.WriteLine("         |   3 - Consultar Folha de Pagamento            |");
                 Console.WriteLine("         |   4 - Listar Folhas de Pagamento              |");
-                Console.WriteLine("         |   5 - Listar Funcionarios                     |");
-                Console.WriteLine("         |   6 - Listar folha de pagamentos              |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -129,6 +127,8 @@ namespace FolhadePagamento.View
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
                             folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
+                            Console.Clear();
+                            Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
                             foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAnoFunc(folhaPagamento))
                             {
                                 Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
@@ -148,6 +148,8 @@ namespace FolhadePagamento.View
                         folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
                         double salarioLiquidoTotal = 0;
                         double salarioBrutoTotal = 0;
+                        Console.Clear();
+                        Console.WriteLine(" -- Listar Folha de Pagamento -- \n");
                         foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAno(folhaPagamento))
                         {
                             Console.WriteLine("\nFolha Cadastrada: " + folhaCadastrada);
