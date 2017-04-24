@@ -179,9 +179,20 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                         }
                         break;
+
+                    case "0":
+                        Console.Clear();
+                        Console.WriteLine("Saindo do programa...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida!");
+                        break;
+
                 }
                         Console.WriteLine("\nAperte uma tecla para continuar");
                         Console.ReadKey();
+                    
 
 
 
