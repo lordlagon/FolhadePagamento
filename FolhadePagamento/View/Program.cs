@@ -92,12 +92,11 @@ namespace FolhadePagamento.View
                             CalcSalario.CalcINSS(folhaPagamento);
                             CalcSalario.CalcFGTS(folhaPagamento);
                             CalcSalario.CalcLiquido(folhaPagamento);
-                            if (FolhaPagamentoDao.BuscarFolha(folhaPagamento) != null)
-                            {
-                                FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
-                                Console.WriteLine("Cadastrado com sucesso!");
-                            }
-                            else { Console.WriteLine("Deu merda"); }
+                                                      
+                            FolhaPagamentoDao.AdicionarFolha(folhaPagamento);
+                            Console.WriteLine("Cadastrado com sucesso!");
+                            
+
 
                         }
                         else
@@ -158,6 +157,16 @@ namespace FolhadePagamento.View
                         foreach (Funcionario funcionarioCadastrado in FuncionarioDao.RetornarLista())
                         {
                             Console.WriteLine("Funcionário: " + funcionarioCadastrado);
+                        }
+                        break;
+
+                    case "6":
+                        //Consulta a folha de pagamento
+                        Console.Clear();
+                        Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
+                        foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.RetornarLista())
+                        {
+                            Console.WriteLine("Folhas cadastradas: " + folhaCadastrada);
                         }
                         break;
                 }
