@@ -72,8 +72,8 @@ namespace FolhadePagamento.View
                         Console.Clear();
                         Console.WriteLine(" -- Cadastrar Folha de Pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
+                        folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(folhaPagamento.Funcionario);
 
                         if (funcionario != null)
                         {
@@ -105,8 +105,6 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Funcionario não existe!");
                             Console.WriteLine("Não foi possível adicionar a Folha de Pagamento");
                         }
-
-
                         break;
 
                     case "3":
@@ -163,7 +161,7 @@ namespace FolhadePagamento.View
                         }
                         break;
                 }
-                        Console.WriteLine("Aperte uma tecla para continuar");
+                        Console.WriteLine("\n Aperte uma tecla para continuar");
                         Console.ReadKey();
 
 
