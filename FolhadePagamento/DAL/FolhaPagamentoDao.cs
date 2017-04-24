@@ -79,6 +79,7 @@ namespace FolhadePagamento.DAL
 
             return folhasAuxFuncionario;
         }
+
         public static List<FolhaPagamento> BuscarFolhaPorMesAno(FolhaPagamento folhaPagamento)
         {
             List<FolhaPagamento> folhasAuxMesAno = new List<FolhaPagamento>();

@@ -142,44 +142,26 @@ namespace FolhadePagamento.View
                         break;
 
 
-                    case "6":
-                        folhaPagamento = new FolhaDePagamento();
+                    case "4":
+                        folhaPagamento = new FolhaPagamento();
                         Console.Clear();
                         Console.WriteLine(" -- Listar Folha de Pagamento -- \n");
                         Console.WriteLine("Digite o Mês: ");
                         folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Digite o Ano: ");
                         folhaPagamento.Ano = Convert.ToInt32(Console.ReadLine());
-                        salario = 0;
-                        SalarioLiquido = 0;
-                        Console.WriteLine("--------------------------------");
-
-                        foreach (FolhaDePagamento folhaCadastrada in FolhaDePagamentoDAO.BuscarFolhaPorDataAno(folhaPagamento))
+                        double salarioLiquidoTotal = 0;
+                        double salarioBrutoTotal = 0;
+                        foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAno(folhaPagamento))
                         {
-                            Console.WriteLine("\nNome: " + folhaCadastrada.funcionario.Nome);
-                            Console.WriteLine("\nCPF: " + folhaCadastrada.funcionario.CPF);
-                            Console.WriteLine("Mês: " + folhaCadastrada.Mes);
-                            Console.WriteLine("Ano: " + folhaCadastrada.Ano);
-                            Console.WriteLine("Salário Bruto: " + folhaCadastrada.SalarioBruto);
-                            Console.WriteLine("Imposto de Renda: " + folhaCadastrada.ImpostoRenda);
-                            Console.WriteLine("INSS: " + folhaCadastrada.INSS);
-                            Console.WriteLine("FGTS: " + folhaCadastrada.FGTS);
-                            Console.WriteLine("Salario Líquido: " + folhaCadastrada.SalarioLiquido);
-                            totalSbruto += folhaCadastrada.SalarioBruto;
-                            totalSLiquido += folhaCadastrada.SalarioLiquido;
+                            Console.WriteLine("Folhas Cadastradas: " + folhaPagamento);
+                            salarioLiquidoTotal += folhaCadastrada.SalarioBruto;
+                            salarioBrutoTotal += folhaCadastrada.Salario.SalarioLiquido;
                         }
-                        Console.WriteLine("\nTotal salário líquido: " + totalSLiquido.ToString("C2"));
-                        Console.WriteLine("\nTotal salário bruto: " + totalSbruto.ToString("C2"));
-                        Console.WriteLine("--------------------------------");
-                        Console.WriteLine("Digite uma tecla para continuar");
-                        prosseguir = Console.ReadLine();
-
-
+                        Console.WriteLine("\nTotal salário líquido: " + salarioLiquidoTotal.ToString("C2"));
+                        Console.WriteLine("\nTotal salário bruto: " + salarioBrutoTotal.ToString("C2"));
                         break;
                 }
-                Console.WriteLine("Aperte uma tecla para continuar");
-                Console.ReadKey();
-
 
             } while (!opcao.Equals("0"));
         }
