@@ -8,7 +8,7 @@ using static System.Convert;
 namespace FolhadePagamento.Util
 {
     class ValidaCPF
-    {               
+    {
         public static bool Cpf(string CPF)
         {
             int[] mt1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };

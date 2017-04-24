@@ -70,7 +70,7 @@ namespace FolhadePagamento.Util
 
         public static Salario CalcLiquido(FolhaPagamento folha)
         {
-                  folha.Salario.SalarioLiquido = folha.SalarioBruto - folha.Salario.ImpRenda - folha.Salario.Inss  ;
+            folha.Salario.SalarioLiquido = folha.SalarioBruto - folha.Salario.ImpRenda - folha.Salario.Inss;
 
             return folha.Salario;
 

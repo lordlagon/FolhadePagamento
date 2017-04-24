@@ -20,7 +20,7 @@ namespace FolhadePagamento.DAL
             }
             return false;
         }
-        
+
         public static List<FolhaPagamento> BuscarFolha(FolhaPagamento folhaPagamento)
         {
             List<FolhaPagamento> folhasAuxFuncionario = new List<FolhaPagamento>();
@@ -64,5 +64,5 @@ namespace FolhadePagamento.DAL
         {
             return folhasdepagamento;
         }
-    } 
+    }
 }

@@ -15,7 +15,7 @@ namespace FolhadePagamento.Model
         public Funcionario Funcionario { get; set; }
         public Salario Salario { get; set; }
         public Double SalarioBruto { get; set; }
-        
+
         public FolhaPagamento()
         {
             Funcionario = new Funcionario();
@@ -24,7 +24,7 @@ namespace FolhadePagamento.Model
 
         public override string ToString()
         {
-            return "\nFolha de Pagamento: Mês: " + Mes + " Ano: " + Ano +"\n--------------------------------------\n\nFuncionario: " + Funcionario.Nome + "\nSalário Bruto: " + SalarioBruto.ToString("C2") + "\n\n" + Salario+ "\n--------------------------------------\n";
+            return "\nFolha de Pagamento: Mês: " + Mes + " Ano: " + Ano + "\n--------------------------------------\n\nFuncionario: " + Funcionario.Nome + "\nSalário Bruto: " + SalarioBruto.ToString("C2") + "\n\n" + Salario + "\n--------------------------------------\n";
         }
     }
 }

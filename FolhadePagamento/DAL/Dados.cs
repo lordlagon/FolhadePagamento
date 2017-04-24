@@ -41,7 +41,7 @@ namespace FolhadePagamento.DAL
 
             };
             funcionarios.ForEach(x => FuncionarioDao.AdicionarFuncionario(x));
-            
+
 
         }
     }
