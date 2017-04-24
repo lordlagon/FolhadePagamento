@@ -16,7 +16,7 @@ namespace FolhadePagamento.Model
 
         public override string ToString()
         {
-            return " Imposto de renda: " + ImpRenda + " Inss: " + Inss + " Fgts: " + Fgts + " Salario liquido: " + SalarioLiquido;
+            return "Imposto de renda: " + ImpRenda.ToString("C2") + "\nInss: " + Inss.ToString("C2") + "\nFgts: " + Fgts.ToString("C2") + "\nSalario liquido: " + SalarioLiquido.ToString("C2");
         }
     }
 }
