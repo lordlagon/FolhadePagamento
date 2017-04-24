@@ -145,7 +145,7 @@ namespace FolhadePagamento.View
                         double salarioBrutoTotal = 0;
                         foreach (FolhaPagamento folhaCadastrada in FolhaPagamentoDao.BuscarFolhaPorMesAno(folhaPagamento))
                         {
-                            Console.WriteLine("Folhas Cadastradas: " + folhaPagamento);
+                            Console.WriteLine("Folhas Cadastradas: " + folhaCadastrada);
                             salarioLiquidoTotal += folhaCadastrada.SalarioBruto;
                             salarioBrutoTotal += folhaCadastrada.Salario.SalarioLiquido;
                         }
@@ -163,7 +163,8 @@ namespace FolhadePagamento.View
                         }
                         break;
 
-
+                        Console.WriteLine("Aperte uma tecla para continuar");
+                        Console.ReadKey();
 
                 }
             } while (!opcao.Equals("0")) ;
