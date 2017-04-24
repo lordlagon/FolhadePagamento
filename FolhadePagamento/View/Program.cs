@@ -30,7 +30,7 @@ namespace FolhadePagamento.View
                 Console.WriteLine("         |   3 - Consultar Folha de Pagamento            |");
                 Console.WriteLine("         |   4 - Listar Folhas de Pagamento              |");
                 Console.WriteLine("         |   5 - Listar Funcionarios                     |");
-                Console.WriteLine("         |   6 - Listar folha de pagamentos                     |");
+                Console.WriteLine("         |   6 - Listar folha de pagamentos              |");
                 Console.WriteLine("         |   0 - Sair                                    |");
                 Console.WriteLine("         |_______________________________________________|");
                 Console.WriteLine("\nDigite a opção desejada: ");
@@ -162,9 +162,10 @@ namespace FolhadePagamento.View
                             Console.WriteLine("Funcionário: " + funcionarioCadastrado);
                         }
                         break;
-
                         Console.WriteLine("Aperte uma tecla para continuar");
                         Console.ReadKey();
+
+
 
                 }
             } while (!opcao.Equals("0")) ;
