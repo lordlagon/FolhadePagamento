@@ -11,13 +11,13 @@ namespace FolhadePagamento.DAL
     {
         private static List<FolhaPagamento> folhasdepagamento = new List<FolhaPagamento>();
 
-        public static bool AdicionarFolha (FolhaPagamento folhaPagamento)
+        public static bool AdicionarFolha(FolhaPagamento folhaPagamento)
         {
             if (BuscarFolha(folhaPagamento) != null)
             {
-                folhasdepagamento.Add(folhaPagamento);
-                return true;
+                return false;
             }
+            folhasdepagamento.Add(folhaPagamento);
             return false;
         }
         /*public static FolhaPagamento BuscarFolha(FolhaPagamento folhaPagamento)
@@ -84,12 +84,13 @@ namespace FolhadePagamento.DAL
             List<FolhaPagamento> folhasAuxMesAno = new List<FolhaPagamento>();
             foreach (FolhaPagamento folhaCadastrada in folhasdepagamento)
             {
-                if(folhaCadastrada.Mes.Equals(folhaPagamento.Mes) && folhaCadastrada.Ano.Equals(folhaPagamento.Ano))
+                if (folhaCadastrada.Mes.Equals(folhaPagamento.Mes) && folhaCadastrada.Ano.Equals(folhaPagamento.Ano))
                 {
                     folhasAuxMesAno.Add(folhaCadastrada);
                 }
             }
             return folhasAuxMesAno;
 
-    }
+        }
+    } 
 }
