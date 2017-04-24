@@ -35,7 +35,7 @@ namespace FolhadePagamento.DAL
                 },
 
             };
-            List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
+            /*List<FolhaPagamento> folhasDePagamento = new List<FolhaPagamento>
             {
                 new FolhaPagamento()
                 {
@@ -47,7 +47,7 @@ namespace FolhadePagamento.DAL
                     SalarioBruto = 44*2.4,
 
                 },
-            };
+            };*/
             
             /*
             List<Produto> produtos = new List<Produto>
