@@ -119,16 +119,16 @@ namespace FolhadePagamento.View
 
                     case "3":
                         //Consulta a folha de pagamento e calcula o salario
+                        folhaPagamento = new FolhaPagamento();
                         Console.Clear();
                         Console.WriteLine(" -- Consulta a folha de pagamento -- \n");
                         Console.WriteLine("Digite o CPF do funcionario: ");
-                        funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
-                        funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
+                        folhaPagamento.Funcionario.Cpf = ValidaCPF.maskCpf(Console.ReadLine());
+                        folhaPagamento.Funcionario = FuncionarioDao.BuscarFuncionarioPorCPF(funcionario);
 
                         if (funcionario != null)
                         {
                             folhaPagamento = new FolhaPagamento();
-                            folhaPagamento.Funcionario = funcionario;
                             Console.WriteLine("Digite o Mês da Trabalhado: ");
                             folhaPagamento.Mes = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Digite o Ano: ");
